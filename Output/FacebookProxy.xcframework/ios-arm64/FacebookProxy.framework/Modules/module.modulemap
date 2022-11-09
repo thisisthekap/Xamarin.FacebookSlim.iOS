@@ -1,0 +1,11 @@
+framework module FacebookProxy {
+  umbrella header "FacebookProxy.h"
+
+  export *
+  module * { export * }
+}
+
+module FacebookProxy.Swift {
+  header "FacebookProxy-Swift.h"
+  requires objc
+}

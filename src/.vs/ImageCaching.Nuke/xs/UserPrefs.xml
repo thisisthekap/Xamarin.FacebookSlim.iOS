@@ -1,0 +1,57 @@
+﻿<Properties StartupConfiguration="{7177EAAC-5341-459A-9F53-EBC78F27F842}|Default">
+  <MonoDevelop.Ide.ItemProperties.Sample PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.53195D22-39B5-40FD-819B-E71D11CD8741" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../Cartfile">
+    <Files>
+      <File FileName="ImageCaching.Nuke/ApiDefinition.cs" Line="31" Column="18" />
+      <File FileName="ImageCaching.Nuke/Structs.cs" Line="1" Column="1" />
+      <File FileName="Sample/ViewController.cs" Line="32" Column="50" />
+      <File FileName="../.github/workflows/publish.yml" Line="1" Column="1" />
+      <File FileName="../.github/workflows/build.yml" Line="36" Column="23" />
+      <File FileName="../Cartfile" Line="2" Column="1" />
+      <File FileName="../build.sh" Line="1" Column="1" />
+      <File FileName="Sample/SceneDelegate.cs" Line="1" Column="1" />
+      <File FileName="Sample/AppDelegate.cs" Line="31" Column="10" />
+      <File FileName="Sample/Main.cs" Line="15" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ImageCaching.Nuke" expanded="True">
+            <Node name="Solution items" expanded="True" />
+            <Node name="ImageCaching.Nuke" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+            </Node>
+            <Node name="Sample" expanded="True" selected="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="FrameworkReferences" expanded="True" />
+                <Node name="PackageDependencies" expanded="True" />
+                <Node name="ProjectDependencies" expanded="True" />
+              </Node>
+              <Node name="Assets.xcassets" expanded="True">
+                <Node name="AppIcon.appiconset" expanded="True" />
+                <Node name="Error.imageset" expanded="True" />
+                <Node name="Placeholder.imageset" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/hipolytoobesohuerta/Documents/GitHub/NukeProxy/src/Sample/ViewController.cs" relfile="Sample/ViewController.cs" line="20" column="1" />
+      <Breakpoint file="/Users/hipolytoobesohuerta/Documents/GitHub/NukeProxy/src/Sample/ViewController.cs" relfile="Sample/ViewController.cs" line="58" column="1" />
+      <Breakpoint file="/Users/hipolytoobesohuerta/Documents/GitHub/NukeProxy/src/Sample/AppDelegate.cs" relfile="Sample/AppDelegate.cs" line="20" column="1" />
+      <Breakpoint file="/Users/hipolytoobesohuerta/Documents/GitHub/NukeProxy/src/Sample/ViewController.cs" relfile="Sample/ViewController.cs" line="101" column="1" />
+      <Breakpoint file="/Users/hipolytoobesohuerta/Documents/GitHub/NukeProxy/src/Sample/Main.cs" relfile="Sample/Main.cs" line="12" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.53195D22-39B5-40FD-819B-E71D11CD8741" />
+</Properties>
