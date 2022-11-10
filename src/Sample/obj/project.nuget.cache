@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dd5HexLJyv0hSKX/knL3rgxVxj5G0UFYmMpeiULEUagt5C6ij7fk/xg5kRg5o+Dcvs9dBNfl/IGbLsWdqQe/VA==",
+  "dgSpecHash": "of4Tg6hGSSZyfDHVGtepTmIrl4AKgjrJ4su05weynUr72MGhuJM/g6up86TJN5WJyiUNKFg61IsC/iRPvO99rA==",
   "success": true,
-  "projectFilePath": "/Users/hipolytoobesohuerta/Documents/GitHub/NukeProxy/src/Sample/Sample.csproj",
+  "projectFilePath": "/Users/hipolytoobesohuerta/Documents/GitHub/ios-SDK/src/Sample/Sample.csproj",
   "expectedPackageFiles": [
     "/Users/hipolytoobesohuerta/.nuget/packages/skiasharp/2.88.2/skiasharp.2.88.2.nupkg.sha512",
     "/Users/hipolytoobesohuerta/.nuget/packages/skiasharp.nativeassets.ios/2.88.2/skiasharp.nativeassets.ios.2.88.2.nupkg.sha512",

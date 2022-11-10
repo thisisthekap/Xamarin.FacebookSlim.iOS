@@ -30,8 +30,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "LoginButtonFb",
-        "printedName": "LoginButtonFb",
+        "name": "LoginProxyManager",
+        "printedName": "LoginProxyManager",
         "children": [
           {
             "kind": "Var",
@@ -40,14 +40,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "LoginButtonFb",
-                "printedName": "FacebookProxy.LoginButtonFb",
-                "usr": "c:@M@FacebookProxy@objc(cs)LoginButtonFb"
+                "name": "LoginProxyManager",
+                "printedName": "FacebookProxy.LoginProxyManager",
+                "usr": "c:@M@FacebookProxy@objc(cs)LoginProxyManager"
               }
             ],
             "declKind": "Var",
-            "usr": "c:@M@FacebookProxy@objc(cs)LoginButtonFb(cpy)shared",
-            "mangledName": "$s13FacebookProxy13LoginButtonFbC6sharedACvpZ",
+            "usr": "c:@M@FacebookProxy@objc(cs)LoginProxyManager(cpy)shared",
+            "mangledName": "$s13FacebookProxy05LoginB7ManagerC6sharedACvpZ",
             "moduleName": "FacebookProxy",
             "static": true,
             "declAttributes": [
@@ -67,20 +67,69 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "LoginButtonFb",
-                    "printedName": "FacebookProxy.LoginButtonFb",
-                    "usr": "c:@M@FacebookProxy@objc(cs)LoginButtonFb"
+                    "name": "LoginProxyManager",
+                    "printedName": "FacebookProxy.LoginProxyManager",
+                    "usr": "c:@M@FacebookProxy@objc(cs)LoginProxyManager"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@M@FacebookProxy@objc(cs)LoginButtonFb(cm)shared",
-                "mangledName": "$s13FacebookProxy13LoginButtonFbC6sharedACvgZ",
+                "usr": "c:@M@FacebookProxy@objc(cs)LoginProxyManager(cm)shared",
+                "mangledName": "$s13FacebookProxy05LoginB7ManagerC6sharedACvgZ",
                 "moduleName": "FacebookProxy",
                 "static": true,
                 "implicit": true,
                 "declAttributes": [
                   "Final",
                   "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "loginManager",
+            "printedName": "loginManager",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LoginManager",
+                "printedName": "FBSDKLoginKit.LoginManager",
+                "usr": "c:@M@FBSDKLoginKit@objc(cs)FBSDKLoginManager"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13FacebookProxy05LoginB7ManagerC05loginD013FBSDKLoginKit0cD0Cvp",
+            "mangledName": "$s13FacebookProxy05LoginB7ManagerC05loginD013FBSDKLoginKit0cD0Cvp",
+            "moduleName": "FacebookProxy",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LoginManager",
+                    "printedName": "FBSDKLoginKit.LoginManager",
+                    "usr": "c:@M@FBSDKLoginKit@objc(cs)FBSDKLoginManager"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13FacebookProxy05LoginB7ManagerC05loginD013FBSDKLoginKit0cD0Cvg",
+                "mangledName": "$s13FacebookProxy05LoginB7ManagerC05loginD013FBSDKLoginKit0cD0Cvg",
+                "moduleName": "FacebookProxy",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
                 ],
                 "accessorKind": "get"
               }
@@ -105,10 +154,38 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@FacebookProxy@objc(cs)LoginButtonFb(im)loadDataWithView:",
-            "mangledName": "$s13FacebookProxy13LoginButtonFbC8loadData4viewSo6UIViewCAG_tF",
+            "usr": "c:@M@FacebookProxy@objc(cs)LoginProxyManager(im)loadDataWithView:",
+            "mangledName": "$s13FacebookProxy05LoginB7ManagerC8loadData4viewSo6UIViewCAG_tF",
             "moduleName": "FacebookProxy",
             "objc_name": "loadDataWithView:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "login",
+            "printedName": "login(viewController:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@FacebookProxy@objc(cs)LoginProxyManager(im)loginWithViewController:",
+            "mangledName": "$s13FacebookProxy05LoginB7ManagerC5login14viewControllerySo06UIViewG0C_tF",
+            "moduleName": "FacebookProxy",
+            "objc_name": "loginWithViewController:",
             "declAttributes": [
               "AccessControl",
               "ObjC"
@@ -122,14 +199,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "LoginButtonFb",
-                "printedName": "FacebookProxy.LoginButtonFb",
-                "usr": "c:@M@FacebookProxy@objc(cs)LoginButtonFb"
+                "name": "LoginProxyManager",
+                "printedName": "FacebookProxy.LoginProxyManager",
+                "usr": "c:@M@FacebookProxy@objc(cs)LoginProxyManager"
               }
             ],
             "declKind": "Constructor",
-            "usr": "c:@M@FacebookProxy@objc(cs)LoginButtonFb(im)init",
-            "mangledName": "$s13FacebookProxy13LoginButtonFbCACycfc",
+            "usr": "c:@M@FacebookProxy@objc(cs)LoginProxyManager(im)init",
+            "mangledName": "$s13FacebookProxy05LoginB7ManagerCACycfc",
             "moduleName": "FacebookProxy",
             "overriding": true,
             "implicit": true,
@@ -143,10 +220,10 @@
           }
         ],
         "declKind": "Class",
-        "usr": "c:@M@FacebookProxy@objc(cs)LoginButtonFb",
-        "mangledName": "$s13FacebookProxy13LoginButtonFbC",
+        "usr": "c:@M@FacebookProxy@objc(cs)LoginProxyManager",
+        "mangledName": "$s13FacebookProxy05LoginB7ManagerC",
         "moduleName": "FacebookProxy",
-        "objc_name": "LoginButtonFb",
+        "objc_name": "LoginProxyManager",
         "declAttributes": [
           "AccessControl",
           "ObjC"

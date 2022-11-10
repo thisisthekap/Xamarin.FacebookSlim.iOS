@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/FacebookProxy-Swift.h</key>
 		<data>
-		8YjuEmXvc9OdnH96mbgVd85t/3U=
+		y+bJYoJ0Lhlr+5eAyQGUQojYvxg=
 		</data>
 		<key>Headers/FacebookProxy.h</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>Modules/FacebookProxy.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		E3dcMEh22FSvHceTva5lsVi0/X0=
+		1KqtGUgJRAe8wXKaVLlZBzI4HXk=
 		</data>
 		<key>Modules/FacebookProxy.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		WKrHdJKQgQKSTW9sUYfk8r28esc=
+		UJFKcQL34r41lkF3p3+gWOmQuRo=
 		</data>
 		<key>Modules/FacebookProxy.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -30,19 +30,19 @@
 		</data>
 		<key>Modules/FacebookProxy.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		WKrHdJKQgQKSTW9sUYfk8r28esc=
+		UJFKcQL34r41lkF3p3+gWOmQuRo=
 		</data>
 		<key>Modules/FacebookProxy.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		v+RQRiPgFzvgYIRgqEqefgj3L8w=
+		XZNYdwplix3tLHtKBqGwyZIRUKo=
 		</data>
 		<key>Modules/FacebookProxy.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		E3dcMEh22FSvHceTva5lsVi0/X0=
+		1KqtGUgJRAe8wXKaVLlZBzI4HXk=
 		</data>
 		<key>Modules/FacebookProxy.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		1XtbNorASV/8WWYTiX+N1udzgD8=
+		AeVam/w1LwbCFIb5ojCnlo58NZo=
 		</data>
 		<key>Modules/FacebookProxy.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/FacebookProxy.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		1XtbNorASV/8WWYTiX+N1udzgD8=
+		AeVam/w1LwbCFIb5ojCnlo58NZo=
 		</data>
 		<key>Modules/FacebookProxy.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		NKuSndw0Zu1+ROb4ORYbk+uOhsM=
+		owkV4wMKdQe8BEUS7Vmhy1jxq8M=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -67,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HicTmNHRimYmb/C2xjf0HWQnw/53gmc/e/GGAQnkJbs=
+			xkpgME0db77GFHa2vgUf8qDLaNUFevuQSj0+VFnWdMA=
 			</data>
 		</dict>
 		<key>Headers/FacebookProxy.h</key>
@@ -81,14 +81,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hJG9eYdrN+v1vBDfBk8rmUAGpUaxmSJCIY/PxDzqpjA=
+			9iFDgLPvF5KfkKbYlDW58Jog6/c/4eVYSlct+WC8DI8=
 			</data>
 		</dict>
 		<key>Modules/FacebookProxy.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			x/iD4RLs5nvRs88p3wOirAaqroQK+wB9fY9Vl6SmPiU=
+			Omp1/Ix2h8yVr1qlp+bqAxwTZPM/7V9PwJ582MoMRdU=
 			</data>
 		</dict>
 		<key>Modules/FacebookProxy.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -102,28 +102,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			x/iD4RLs5nvRs88p3wOirAaqroQK+wB9fY9Vl6SmPiU=
+			Omp1/Ix2h8yVr1qlp+bqAxwTZPM/7V9PwJ582MoMRdU=
 			</data>
 		</dict>
 		<key>Modules/FacebookProxy.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zubgL74uoTKLxpXiriPQW7hVibQFN3WqdFndGQhZ5+g=
+			x7Jz1c8kEiMGXtWFBKA8dJtR0wajvYUEEv/uCkYbh6o=
 			</data>
 		</dict>
 		<key>Modules/FacebookProxy.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hJG9eYdrN+v1vBDfBk8rmUAGpUaxmSJCIY/PxDzqpjA=
+			9iFDgLPvF5KfkKbYlDW58Jog6/c/4eVYSlct+WC8DI8=
 			</data>
 		</dict>
 		<key>Modules/FacebookProxy.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nfMdjzYBFbl+1TLQJRii5UOCaMw32HK7Q+Sqm6Xpuzg=
+			Z1Utf8qlgR+CZAJ9BHQKY1u9a/dDBl25ZbWcVKB/8+U=
 			</data>
 		</dict>
 		<key>Modules/FacebookProxy.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -137,14 +137,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nfMdjzYBFbl+1TLQJRii5UOCaMw32HK7Q+Sqm6Xpuzg=
+			Z1Utf8qlgR+CZAJ9BHQKY1u9a/dDBl25ZbWcVKB/8+U=
 			</data>
 		</dict>
 		<key>Modules/FacebookProxy.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VhjkXm1wm7CJuR5hTU7BE5Wbfv8/YOVO02MdUlBxOnE=
+			fkYj/mg1Myyn8NftA32pVhsMArXg2OF1wjUWRQK/+Og=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

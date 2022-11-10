@@ -65,26 +65,6 @@ namespace ApiDefinition {
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
 		public extern static NativeHandle NativeHandle_objc_msgSendSuper (IntPtr receiver, IntPtr selector);
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
-		public extern static void void_objc_msgSend (IntPtr receiver, IntPtr selector);
-		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
-		public extern static void void_objc_msgSendSuper (IntPtr receiver, IntPtr selector);
-		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
-		public extern static void void_objc_msgSend_NativeHandle_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2);
-		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
-		public extern static void void_objc_msgSendSuper_NativeHandle_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2);
-		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
-		public extern static void void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2, NativeHandle arg3, NativeHandle arg4);
-		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
-		public extern static void void_objc_msgSendSuper_NativeHandle_NativeHandle_NativeHandle_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2, NativeHandle arg3, NativeHandle arg4);
-		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
-		public extern static void void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle_NativeHandle_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2, NativeHandle arg3, NativeHandle arg4, NativeHandle arg5);
-		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
-		public extern static void void_objc_msgSendSuper_NativeHandle_NativeHandle_NativeHandle_NativeHandle_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2, NativeHandle arg3, NativeHandle arg4, NativeHandle arg5);
-		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
-		public extern static void void_objc_msgSend_NativeHandle_NativeHandle_bool_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2, [MarshalAs (UnmanagedType.I1)] bool arg3, NativeHandle arg4);
-		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
-		public extern static void void_objc_msgSendSuper_NativeHandle_NativeHandle_bool_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2, [MarshalAs (UnmanagedType.I1)] bool arg3, NativeHandle arg4);
-		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
 		public extern static void void_objc_msgSend_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1);
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
 		public extern static void void_objc_msgSendSuper_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1);

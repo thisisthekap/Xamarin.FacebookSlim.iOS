@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/hipolytoobesohuerta/Documents/GitHub/NukeProxy/src/Sample/Sample.csproj": {}
+    "/Users/hipolytoobesohuerta/Documents/GitHub/ios-SDK/src/Sample/Sample.csproj": {}
   },
   "projects": {
-    "/Users/hipolytoobesohuerta/Documents/GitHub/NukeProxy/src/ImageCaching.Nuke/ImageCaching.Nuke.csproj": {
+    "/Users/hipolytoobesohuerta/Documents/GitHub/ios-SDK/src/ImageCaching.Nuke/ImageCaching.Nuke.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/hipolytoobesohuerta/Documents/GitHub/NukeProxy/src/ImageCaching.Nuke/ImageCaching.Nuke.csproj",
+        "projectUniqueName": "/Users/hipolytoobesohuerta/Documents/GitHub/ios-SDK/src/ImageCaching.Nuke/ImageCaching.Nuke.csproj",
         "projectName": "ImageCaching.Nuke",
-        "projectPath": "/Users/hipolytoobesohuerta/Documents/GitHub/NukeProxy/src/ImageCaching.Nuke/ImageCaching.Nuke.csproj",
+        "projectPath": "/Users/hipolytoobesohuerta/Documents/GitHub/ios-SDK/src/ImageCaching.Nuke/ImageCaching.Nuke.csproj",
         "packagesPath": "/Users/hipolytoobesohuerta/.nuget/packages/",
-        "outputPath": "/Users/hipolytoobesohuerta/Documents/GitHub/NukeProxy/src/ImageCaching.Nuke/obj/",
+        "outputPath": "/Users/hipolytoobesohuerta/Documents/GitHub/ios-SDK/src/ImageCaching.Nuke/obj/",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "configFilePaths": [
@@ -114,14 +114,14 @@
         }
       }
     },
-    "/Users/hipolytoobesohuerta/Documents/GitHub/NukeProxy/src/Sample/Sample.csproj": {
+    "/Users/hipolytoobesohuerta/Documents/GitHub/ios-SDK/src/Sample/Sample.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/hipolytoobesohuerta/Documents/GitHub/NukeProxy/src/Sample/Sample.csproj",
+        "projectUniqueName": "/Users/hipolytoobesohuerta/Documents/GitHub/ios-SDK/src/Sample/Sample.csproj",
         "projectName": "Sample",
-        "projectPath": "/Users/hipolytoobesohuerta/Documents/GitHub/NukeProxy/src/Sample/Sample.csproj",
+        "projectPath": "/Users/hipolytoobesohuerta/Documents/GitHub/ios-SDK/src/Sample/Sample.csproj",
         "packagesPath": "/Users/hipolytoobesohuerta/.nuget/packages/",
-        "outputPath": "/Users/hipolytoobesohuerta/Documents/GitHub/NukeProxy/src/Sample/obj/",
+        "outputPath": "/Users/hipolytoobesohuerta/Documents/GitHub/ios-SDK/src/Sample/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/hipolytoobesohuerta/.nuget/NuGet/NuGet.Config"
@@ -136,8 +136,8 @@
           "net6.0-ios16.0": {
             "targetAlias": "net6.0-ios",
             "projectReferences": {
-              "/Users/hipolytoobesohuerta/Documents/GitHub/NukeProxy/src/ImageCaching.Nuke/ImageCaching.Nuke.csproj": {
-                "projectPath": "/Users/hipolytoobesohuerta/Documents/GitHub/NukeProxy/src/ImageCaching.Nuke/ImageCaching.Nuke.csproj"
+              "/Users/hipolytoobesohuerta/Documents/GitHub/ios-SDK/src/ImageCaching.Nuke/ImageCaching.Nuke.csproj": {
+                "projectPath": "/Users/hipolytoobesohuerta/Documents/GitHub/ios-SDK/src/ImageCaching.Nuke/ImageCaching.Nuke.csproj"
               }
             }
           }

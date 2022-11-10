@@ -64,11 +64,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <NativeReference Include="..\..\Output\NukeProxy.xcframework">
+    <NativeReference Include="..\..\Output\FacebookProxy.xcframework">
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
     </NativeReference>
-    <NativeReference Include="..\..\Carthage\Build\Nuke.xcframework">
+    <NativeReference Include="..\..\Carthage\Build\FacebookProxy.xcframework">
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
     </NativeReference>

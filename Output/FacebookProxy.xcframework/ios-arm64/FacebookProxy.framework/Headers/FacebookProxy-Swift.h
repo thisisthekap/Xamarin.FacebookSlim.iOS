@@ -252,12 +252,14 @@ using UInt = size_t;
 
 #if defined(__OBJC__)
 @class UIView;
+@class UIViewController;
 
-SWIFT_CLASS_NAMED("LoginButtonFb")
-@interface LoginButtonFb : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LoginButtonFb * _Nonnull shared;)
-+ (LoginButtonFb * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_NAMED("LoginProxyManager")
+@interface LoginProxyManager : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LoginProxyManager * _Nonnull shared;)
++ (LoginProxyManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
 - (UIView * _Nonnull)loadDataWithView:(UIView * _Nonnull)view SWIFT_WARN_UNUSED_RESULT;
+- (void)LoginWithViewController:(UIViewController * _Nonnull)viewController;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 

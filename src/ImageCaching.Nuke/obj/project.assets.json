@@ -42,9 +42,7 @@
       "System.Runtime.InteropServices.NFloat.Internal/6.0.1": {
         "type": "package",
         "compile": {
-          "ref/net6.0/System.Runtime.InteropServices.dll": {
-            "related": ".xml"
-          }
+          "ref/net6.0/System.Runtime.InteropServices.dll": {}
         }
       }
     },
@@ -89,9 +87,7 @@
       "System.Runtime.InteropServices.NFloat.Internal/6.0.1": {
         "type": "package",
         "compile": {
-          "ref/net6.0/System.Runtime.InteropServices.dll": {
-            "related": ".xml"
-          }
+          "ref/net6.0/System.Runtime.InteropServices.dll": {}
         }
       }
     }
@@ -268,11 +264,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/hipolytoobesohuerta/Documents/GitHub/NukeProxy/src/ImageCaching.Nuke/ImageCaching.Nuke.csproj",
+      "projectUniqueName": "/Users/hipolytoobesohuerta/Documents/GitHub/ios-SDK/src/ImageCaching.Nuke/ImageCaching.Nuke.csproj",
       "projectName": "ImageCaching.Nuke",
-      "projectPath": "/Users/hipolytoobesohuerta/Documents/GitHub/NukeProxy/src/ImageCaching.Nuke/ImageCaching.Nuke.csproj",
+      "projectPath": "/Users/hipolytoobesohuerta/Documents/GitHub/ios-SDK/src/ImageCaching.Nuke/ImageCaching.Nuke.csproj",
       "packagesPath": "/Users/hipolytoobesohuerta/.nuget/packages/",
-      "outputPath": "/Users/hipolytoobesohuerta/Documents/GitHub/NukeProxy/src/ImageCaching.Nuke/obj/",
+      "outputPath": "/Users/hipolytoobesohuerta/Documents/GitHub/ios-SDK/src/ImageCaching.Nuke/obj/",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "configFilePaths": [

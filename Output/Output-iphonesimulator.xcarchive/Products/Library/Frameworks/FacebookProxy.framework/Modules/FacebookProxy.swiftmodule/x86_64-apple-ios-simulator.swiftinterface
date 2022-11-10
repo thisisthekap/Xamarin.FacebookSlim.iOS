@@ -9,9 +9,11 @@ import Swift
 import UIKit
 import _Concurrency
 import _StringProcessing
-@_inheritsConvenienceInitializers @objc(LoginButtonFb) public class LoginButtonFb : ObjectiveC.NSObject {
-  @objc public static let shared: FacebookProxy.LoginButtonFb
+@_inheritsConvenienceInitializers @objc(LoginProxyManager) public class LoginProxyManager : ObjectiveC.NSObject {
+  @objc public static let shared: FacebookProxy.LoginProxyManager
+  final public let loginManager: FBSDKLoginKit.LoginManager
   @objc public func loadData(view: UIKit.UIView) -> UIKit.UIView
+  @objc public func login(viewController: UIKit.UIViewController)
   @objc override dynamic public init()
   @objc deinit
 }
