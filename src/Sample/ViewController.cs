@@ -24,24 +24,15 @@ namespace Sample
             {
                 TranslatesAutoresizingMaskIntoConstraints = false
             };
-            
-            Add(image);
 
-            ImagePipeline.Shared.LoadImageWithUrl(
-                new NSUrl("https://placekitten.com/g/300/300"),
-                (img, url) => image.Image = img);
+            Add(image);
 
             UIButton button = AddButton("Placeholder");
 
             button.TouchUpInside += (s, e) =>
             {
-                ImageCache.Shared.RemoveAll();
-
-                ImagePipeline.Shared.LoadImageWithUrl(
-                    new NSUrl("https://placekitten.com/g/1000/1000"),
-                    UIImage.FromBundle("Placeholder"),
-                    null,
-                    image);
+                var logonManager = LoginProxyManager.Shared;
+                logonManager.LoginWithViewController(this, delegateHandler);
             };
 
             var skiaView = new SKCanvasView
@@ -55,17 +46,16 @@ namespace Sample
 
             button2.TouchUpInside += (s, e) =>
             {
-                ImagePipeline.Shared.LoadDataWithUrl(new NSUrl("https://placekitten.com/g/1000/1000"), (data, response) =>
-                {
-                    using var dataStream = data.AsStream();
-                    _bitmap = SKBitmap.Decode(dataStream);
-
-                    skiaView.LayoutSubviews();
-                });
+                var logonManager = LoginProxyManager.Shared;
+                logonManager.LoginWithViewController(this, delegateHandler);
             };
 
             AddConstraints(image, button, button2, skiaView);
         }
+
+        private void delegateHandler(loginResultEnum enumt, string result)
+           {
+            }
 
         private void OnPaintSurface(object sender, SKPaintSurfaceEventArgs e)
         {

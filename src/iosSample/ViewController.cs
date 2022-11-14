@@ -1,4 +1,5 @@
 ﻿using Foundation;
+using NativeLibrary;
 using System;
 using UIKit;
 
@@ -26,7 +27,7 @@ namespace iosSample
 
         private void TouchUpInsideHandler(object sender, EventArgs e)
         {
-            var logonManager = new NativeLibrary.LoginProxyManager();
+            var logonManager = LoginProxyManager.Shared;
             logonManager.LoginWithViewController(this);
         }
 

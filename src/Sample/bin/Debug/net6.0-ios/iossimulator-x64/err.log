@@ -1,8 +1,0 @@
-2022-11-07 12:47:37.622547-0700 Sample[40859:3437970] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=40859
-2022-11-07 12:47:37.629326-0700 Sample[40859:3437970] SecTaskCopyDebugDescription: Sample[40859]/0#-1 LF=0
-2022-11-07 12:47:37.708334-0700 Sample[40859:3437970] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=40859
-2022-11-07 12:47:37.708720-0700 Sample[40859:3437970] SecTaskCopyDebugDescription: Sample[40859]/0#-1 LF=0
-objc[40859]: Class SBFCARendererImageRepresentation is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/SpringBoardFoundation.framework/SpringBoardFoundation (0x148949028) and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/PaperBoardUI.framework/PaperBoardUI (0x14879e218). One of the two will be used. Which one is undefined.
-2022-11-07 12:47:37.990425-0700 Sample[40859:3437970] The type Sample.ViewController does not have a constructor that takes an ObjCRuntime.NativeHandle parameter but a constructor that takes an System.IntPtr parameter was found (and will be used instead). It's highly recommended to change the signature of the System.IntPtr constructor to be ObjCRuntime.NativeHandle.
-2022-11-07 12:47:38.013134-0700 Sample[40859:3438033] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=40859
-2022-11-07 12:47:38.013612-0700 Sample[40859:3438033] SecTaskCopyDebugDescription: Sample[40859]/0#-1 LF=0
