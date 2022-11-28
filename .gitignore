@@ -344,4 +344,4 @@ sharpie_output/
 Cartfile.resolved
 Carthage
 *.Output
-
+.DS_Store
