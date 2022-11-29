@@ -49,7 +49,7 @@ namespace Xamarin.FacebookSlim
     }
 
     [Native]
-    public enum loginResultEnum : long
+    public enum LoginResultEnum : long
     {
         Error = 0,
         Cancelled = 1,
