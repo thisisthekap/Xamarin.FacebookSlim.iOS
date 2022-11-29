@@ -42,7 +42,7 @@ namespace Sample
             skiaView.PaintSurface += OnPaintSurface;
             Add(skiaView);
 
-            UIButton button2 = AddButton("Streamed image");
+            UIButton button2 = AddButton("Login Test");
 
             button2.TouchUpInside += (s, e) =>
             {

@@ -5,23 +5,18 @@
     <NoBindingEmbedding>true</NoBindingEmbedding>
     <RootNamespace>Xamarin.FacebookSlim</RootNamespace>
     <SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net6.0-ios'">14.0</SupportedOSPlatformVersion>
-    <SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net6.0-maccatalyst'">14.0</SupportedOSPlatformVersion>
     <BindingPlatform>$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)'))</BindingPlatform>
     <AssemblyName>Xamarin.FacebookSlim</AssemblyName>
   </PropertyGroup>
   
   <PropertyGroup>
-    <Copyright>Xamarin FacebookSlim 2022</Copyright>
-    <PackageProjectUrl>https://github.com/thisisthekap/Xamarin.FacebookSlim.iOS</PackageProjectUrl>
-    <PackageIcon></PackageIcon>
-    <Authors></Authors>
-    <Owners></Owners>
-    <PackageTags>xamarin.ios ios facebook</PackageTags>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <RepositoryUrl>https://github.com/facebook/facebook-ios-sdk</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
+    <IsPackable>true</IsPackable>
+    <PackageId>Xamarin.FacebookSlim.ios</PackageId>
+    <Version>15.1.0.13</Version>
+    <Description>Contains bindings for https://github.com/facebook/facebook-ios-sdk</Description>
+    <Authors>Christian Kapplmüller, Hipolyto Obeso Huerta</Authors>
+    <Company>fun.music IT GmbH</Company>
+    <PackageOutputPath>nugetoutput</PackageOutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">

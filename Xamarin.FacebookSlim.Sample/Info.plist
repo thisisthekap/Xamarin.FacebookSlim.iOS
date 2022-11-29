@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>Nuke Sample</string>
+	<string>Xamarin FacebookProxy</string>
 	<key>CFBundleIdentifier</key>
-	<string>awesomeorg.nuke.sample</string>
+	<string>xamarin.facebookProxy</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
