@@ -4,7 +4,7 @@ import Foundation
 import UIKit
 import FacebookLogin
 
-@objc public enum loginResultEnum : Int {
+@objc public enum LoginResultEnum : Int {
     case Error
     case Cancelled
     case LoggedIn
@@ -65,15 +65,15 @@ public class LoginManagerSlim : NSObject {
     private let loginManager = LoginManager()
     
     @objc
-    public func login(viewController: UIViewController, onCompleted: @escaping  (loginResultEnum, LoginResult?) -> Void) {
+    public func login(viewController: UIViewController, onCompleted: @escaping  (LoginResultEnum, LoginResult?) -> Void) {
         
         LoginManagerSlim.shared.loginManager.logIn(permissions: ["public_profile", "email"], from: viewController) { result, error in
             if let error = error {
                 print("Encountered Erorr: \(error)")
-                onCompleted(loginResultEnum.Error, nil)
+                onCompleted(LoginResultEnum.Error, nil)
             } else if let result = result, result.isCancelled {
                 print("Cancelled")
-                onCompleted(loginResultEnum.Cancelled, nil)
+                onCompleted(LoginResultEnum.Cancelled, nil)
             } else {
                 print("Logged In")
                 let loginResult = LoginResult()
@@ -83,7 +83,7 @@ public class LoginManagerSlim : NSObject {
                 loginResult.grantedPermissions = result?.grantedPermissions ?? []
                 loginResult.declinedPermissions = result?.declinedPermissions ?? []
                 
-                onCompleted(loginResultEnum.LoggedIn, loginResult)
+                onCompleted(LoginResultEnum.LoggedIn, loginResult)
             }
         }
     }
