@@ -59,7 +59,7 @@ namespace Xamarin.FacebookSlim
 
         // -(void)loginWithViewController:(UIViewController * _Nonnull)viewController onCompleted:(void (^ _Nonnull)(enum loginResultEnum, LoginResult * _Nullable))onCompleted;
         [Export("loginWithViewController:onCompleted:")]
-        void LoginWithViewController(UIViewController viewController, Action<loginResultEnum, LoginResult> onCompleted);
+        void LoginWithViewController(UIViewController viewController, Action<LoginResultEnum, LoginResult> onCompleted);
 
         // -(void)logout;
         [Export("logout")]
