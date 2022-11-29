@@ -23,9 +23,9 @@ import FacebookLogin
     case   DeveloperErrors
 }
 
-@objc public class LoginResult: NSObject {
+@objc public class LoginResult : NSObject {
 
-   @objc public var token = ""
+    @objc public var token = ""
     @objc public var authenticationToken = ""
     @objc public var grantedPermissions: Set<String> = []
     @objc public var declinedPermissions: Set<String> = []
