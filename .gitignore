@@ -345,3 +345,4 @@ Cartfile.resolved
 Carthage
 *.Output
 .DS_Store
+.DS_Store
