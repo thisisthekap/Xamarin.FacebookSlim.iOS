@@ -130,7 +130,7 @@
 				86357C56292341E00093E02E /* FacebookLogin */,
 				86357C58292341E00093E02E /* FacebookShare */,
 			);
-			productName = NukeProxy;
+			productName = FacebookProxy;
 			productReference = B08309D0241256530090FB75 /* FacebookProxy.framework */;
 			productType = "com.apple.product-type.framework";
 		};
