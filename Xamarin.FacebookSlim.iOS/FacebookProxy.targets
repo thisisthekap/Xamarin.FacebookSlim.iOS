@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+      <_FacebookProxyId>FacebookProxy</_FacebookProxyId>
+	</PropertyGroup>
+
+	<ItemGroup Condition="('$(OutputType)' != 'Library' OR '$(IsAppExtension)' == 'True') AND ('$(TargetFrameworks)' == '' AND '$(TargetFramework)' == '')">
+        <_NativeReference Include="$(MSBuildThisFileDirectory)..\lib\xamarinios10\Xamarin.FacebookSlim.iOS.resources\FacebookProxy.xcframework">
+            <_Id>$(_FacebookProxyId)</_Id>
+        </_NativeReference>
+  </ItemGroup>
+  
+  <Target Name="_ResolveNativeReferencesForFacebookCoreKit" 
+          BeforeTargets="ResolveNativeReferences"
+          Condition="('$(TargetFrameworks)' == '' AND '$(TargetFramework)' == '') OR '$(IsBindingProject)' == 'true'">
+    <ItemGroup>
+      <_NativeReference Update="@(_NativeReference)" Condition="'%(_NativeReference._Id)' == '$(_FacebookProxyId)'">
+        <Kind>Framework</Kind>
+        <SmartLink>True</SmartLink>
+        <ForceLoad>True</ForceLoad>
+        <LinkerFlags>-ObjC</LinkerFlags>
+      </_NativeReference>
+      <NativeReference Include="@(_NativeReference)" />
+    </ItemGroup>
+  </Target>
+</Project>
