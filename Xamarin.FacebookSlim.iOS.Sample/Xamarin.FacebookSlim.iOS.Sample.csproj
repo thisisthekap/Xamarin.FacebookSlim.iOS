@@ -35,6 +35,6 @@
     </ItemGroup>
     
     <ItemGroup>
-      <ProjectReference Include="..\Xamarin.FacebookSlim\Xamarin.FacebookSlim.csproj" />
+      <ProjectReference Include="..\Xamarin.FacebookSlim.iOS\Xamarin.FacebookSlim.iOS.csproj" />
     </ItemGroup>
 </Project>

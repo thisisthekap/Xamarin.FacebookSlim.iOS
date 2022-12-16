@@ -8,9 +8,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution 
 		carthage.sh = carthage.sh
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.FacebookSlim", "Xamarin.FacebookSlim\Xamarin.FacebookSlim.csproj", "{C15D6B9B-03CC-4830-8E02-172B97D13F98}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.FacebookSlim.iOS", "Xamarin.FacebookSlim.iOS\Xamarin.FacebookSlim.iOS.csproj", "{C15D6B9B-03CC-4830-8E02-172B97D13F98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.FacebookSlim.Sample", "Xamarin.FacebookSlim.Sample\Xamarin.FacebookSlim.Sample.csproj", "{52998E3F-AB9F-4057-89DE-FB3511E9A989}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.FacebookSlim.iOS.Sample", "Xamarin.FacebookSlim.iOS.Sample\Xamarin.FacebookSlim.iOS.Sample.csproj", "{52998E3F-AB9F-4057-89DE-FB3511E9A989}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

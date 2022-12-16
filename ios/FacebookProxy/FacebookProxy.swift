@@ -10,7 +10,7 @@ import FacebookLogin
     case LoggedIn
 }
 
-@objc public enum ProxyLoggingBehavior : Int {
+@objc public enum LoggingBehaviorEnum : Int {
     case   AccessTokens
     case   PerformanceCharacteristics
     case   AppEvents
@@ -18,17 +18,10 @@ import FacebookLogin
     case   CacheErrors
     case   UIControlErrors
     case   GraphAPIDebugWarning
-    case   GraphAPIDebugInfo
+    // we do not expose GraphAPIDebugInfo until https://github.com/facebook/facebook-ios-sdk/issues/2152 is resolved
+    //case   GraphAPIDebugInfo
     case   NetworkRequests
     case   DeveloperErrors
-}
-
-@objc public class LoginResult : NSObject {
-
-    @objc public var token = ""
-    @objc public var authenticationToken = ""
-    @objc public var grantedPermissions: Set<String> = []
-    @objc public var declinedPermissions: Set<String> = []
 }
 
 @objc public enum AppEventNameEnum : Int {
@@ -55,7 +48,15 @@ import FacebookLogin
     case   Subscribe
     case   AdImpression
     case   AdClick
-  }
+}
+
+@objc public class LoginResult : NSObject {
+    
+    @objc public var token = ""
+    @objc public var authenticationToken = ""
+    @objc public var grantedPermissions: Set<String> = []
+    @objc public var declinedPermissions: Set<String> = []
+}
 
 @objc(LoginManagerSlim)
 public class LoginManagerSlim : NSObject {
@@ -65,17 +66,14 @@ public class LoginManagerSlim : NSObject {
     private let loginManager = LoginManager()
     
     @objc
-    public func login(viewController: UIViewController, onCompleted: @escaping  (LoginResultEnum, LoginResult?) -> Void) {
+    public func login(permissions: [String], viewController: UIViewController, onCompleted: @escaping  (LoginResultEnum, LoginResult?, Error?) -> Void) {
         
-        LoginManagerSlim.shared.loginManager.logIn(permissions: ["public_profile", "email"], from: viewController) { result, error in
+        LoginManagerSlim.shared.loginManager.logIn(permissions: permissions, from: viewController) { result, error in
             if let error = error {
-                print("Encountered Erorr: \(error)")
-                onCompleted(LoginResultEnum.Error, nil)
+                onCompleted(LoginResultEnum.Error, nil, error)
             } else if let result = result, result.isCancelled {
-                print("Cancelled")
-                onCompleted(LoginResultEnum.Cancelled, nil)
+                onCompleted(LoginResultEnum.Cancelled, nil, nil)
             } else {
-                print("Logged In")
                 let loginResult = LoginResult()
                 
                 loginResult.token = result?.token?.tokenString ?? ""
@@ -83,7 +81,7 @@ public class LoginManagerSlim : NSObject {
                 loginResult.grantedPermissions = result?.grantedPermissions ?? []
                 loginResult.declinedPermissions = result?.declinedPermissions ?? []
                 
-                onCompleted(LoginResultEnum.LoggedIn, loginResult)
+                onCompleted(LoginResultEnum.LoggedIn, loginResult, nil)
             }
         }
     }
@@ -103,58 +101,51 @@ public class CoreKitManagerSlim : NSObject {
     private static let settings = FBSDKCoreKit.Settings()
     
     @objc
-    public func enableLoggingBehavior(apploggingBehavior: ProxyLoggingBehavior) -> Void{
+    public func enableLoggingBehavior(apploggingBehavior: LoggingBehaviorEnum) -> Void {
         
         var loggingBehavior = LoggingBehavior.appEvents
         
         switch apploggingBehavior {
-        case   ProxyLoggingBehavior.AccessTokens:
-                loggingBehavior = LoggingBehavior.accessTokens
-        case   ProxyLoggingBehavior.PerformanceCharacteristics:
-                loggingBehavior = LoggingBehavior.performanceCharacteristics
-        case   ProxyLoggingBehavior.AppEvents:
-                loggingBehavior = LoggingBehavior.appEvents
-        case   ProxyLoggingBehavior.Informational:
-                loggingBehavior = LoggingBehavior.informational
-        case   ProxyLoggingBehavior.CacheErrors:
-                loggingBehavior = LoggingBehavior.cacheErrors
-        case   ProxyLoggingBehavior.UIControlErrors:
+        case   LoggingBehaviorEnum.AccessTokens:
+            loggingBehavior = LoggingBehavior.accessTokens
+        case   LoggingBehaviorEnum.PerformanceCharacteristics:
+            loggingBehavior = LoggingBehavior.performanceCharacteristics
+        case   LoggingBehaviorEnum.AppEvents:
+            loggingBehavior = LoggingBehavior.appEvents
+        case   LoggingBehaviorEnum.Informational:
+            loggingBehavior = LoggingBehavior.informational
+        case   LoggingBehaviorEnum.CacheErrors:
+            loggingBehavior = LoggingBehavior.cacheErrors
+        case   LoggingBehaviorEnum.UIControlErrors:
             loggingBehavior = LoggingBehavior.uiControlErrors
-        case   ProxyLoggingBehavior.GraphAPIDebugWarning:
-                loggingBehavior = LoggingBehavior.graphAPIDebugWarning
-        case   ProxyLoggingBehavior.GraphAPIDebugInfo:
-                loggingBehavior = LoggingBehavior.graphAPIDebugInfo
-        case   ProxyLoggingBehavior.NetworkRequests:
-                loggingBehavior = LoggingBehavior.networkRequests
-        case   ProxyLoggingBehavior.DeveloperErrors:
-                loggingBehavior = LoggingBehavior.developerErrors
+        case   LoggingBehaviorEnum.GraphAPIDebugWarning:
+            loggingBehavior = LoggingBehavior.graphAPIDebugWarning
+        // we do not expose GraphAPIDebugInfo until https://github.com/facebook/facebook-ios-sdk/issues/2152 is resolved
+        //case   LoggingBehaviorEnum.GraphAPIDebugInfo:
+        //    loggingBehavior = LoggingBehavior.graphAPIDebugInfo
+        case     LoggingBehaviorEnum.NetworkRequests:
+            loggingBehavior = LoggingBehavior.networkRequests
+        case   LoggingBehaviorEnum.DeveloperErrors:
+            loggingBehavior = LoggingBehavior.developerErrors
         }
-       
+        
         CoreKitManagerSlim.settings.enableLoggingBehavior(loggingBehavior)
     }
     
     @objc
-    public func IsAdvertiserTrackingEnabled(enabled : Bool) -> Void{
-        CoreKitManagerSlim.settings.isAdvertiserTrackingEnabled = enabled
+    public var isAdvertiserTrackingEnabled: Bool {
+        get { CoreKitManagerSlim.settings.isAdvertiserTrackingEnabled }
+        set(enabled) { CoreKitManagerSlim.settings.isAdvertiserTrackingEnabled = enabled }
     }
     
     @objc
-    public func isAdvertiserTrackingEnabled() -> Bool{
-        return CoreKitManagerSlim.settings.isAdvertiserTrackingEnabled
+    public var isAdvertiserIdCollectionEnabled : Bool {
+        get { CoreKitManagerSlim.settings.isAdvertiserIDCollectionEnabled }
+        set(enabled) { CoreKitManagerSlim.settings.isAdvertiserIDCollectionEnabled = enabled }
     }
     
     @objc
-    public func IsAdvertiserIdCollectionEnabled(enabled : Bool) -> Void{
-        CoreKitManagerSlim.settings.isAdvertiserIDCollectionEnabled = enabled
-    }
-    
-    @objc
-    public func isAdvertiserIdCollectionEnabled() -> Bool{
-        return CoreKitManagerSlim.settings.isAdvertiserIDCollectionEnabled
-    }
-    
-    @objc
-    public func logEvent(appEventName : AppEventNameEnum, appparameters : NSDictionary) -> Void{
+    public func logEvent(appEventName : AppEventNameEnum, appparameters : NSDictionary) -> Void {
         
         var appEventsName = AppEvents.Name("default")
         
@@ -211,17 +202,56 @@ public class CoreKitManagerSlim : NSObject {
     }
     
     @objc
-    public func logEventCustom(appEventName : NSString, appparameters : NSDictionary) -> Void{
+    public var userId : String? {
+        get { FBSDKCoreKit.AppEvents.shared.userID }
+        set(userId) { FBSDKCoreKit.AppEvents.shared.userID = userId }
+    }
+    
+    @objc
+    public func setUser(userEmail : String, firstName : String, lastName : String, phone : String, dateOfBirth : String, gender : String, city : String, state : String, zip : String, country : String) -> Void {
+        FBSDKCoreKit.AppEvents.shared.setUser(
+            email: userEmail,
+            firstName: firstName,
+            lastName: lastName,
+            phone: phone,
+            dateOfBirth: dateOfBirth,
+            gender: gender,
+            city: city,
+            state: state,
+            zip: zip,
+            country: country)
+    }
+    
+    @objc
+    public func anonymousId() -> String {
+        return FBSDKCoreKit.AppEvents.shared.anonymousID
+    }
+    
+    @objc
+    public func activateApp() -> Void {
+        FBSDKCoreKit.AppEvents.shared.activateApp()
+    }
+    
+    @objc
+    public func logEventCustom(appEventName : String, appparameters : NSDictionary) -> Void {
         
-        var appEventsName = AppEvents.Name(appEventName as String)
+        let appEventsName = AppEvents.Name(appEventName)
         FBSDKCoreKit.AppEvents.shared.logEvent(appEventsName)
     }
     
-    
     @objc
-    public func initializeSdk() -> Void{
+    public func initializeSdk() -> Void {
         FBSDKCoreKit.ApplicationDelegate.shared.initializeSDK()
     }
     
+    @objc
+    public func finishedLaunching(app : UIApplication, options : [UIApplication.LaunchOptionsKey : Any]) -> Bool {
+        return FBSDKCoreKit.ApplicationDelegate.shared.application(app, didFinishLaunchingWithOptions: options)
+    }
+    
+    @objc
+    public func openUrl(app : UIApplication, url : URL, options : [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
+        return FBSDKCoreKit.ApplicationDelegate.shared.application(app,open:url,options:options)
+    }
 }
 

@@ -1,9 +1,10 @@
 ﻿using System;
 using Foundation;
+using ObjCRuntime;
 using SkiaSharp;
 using SkiaSharp.Views.iOS;
 using UIKit;
-using Xamarin.FacebookSlim;
+using Xamarin.FacebookSlim.iOS;
 
 namespace Sample
 {
@@ -11,7 +12,7 @@ namespace Sample
     {
         private SKBitmap _bitmap;
 
-        public ViewController(IntPtr handle) : base(handle)
+        public ViewController(NativeHandle handle) : base(handle)
         {
         }
 
@@ -32,7 +33,7 @@ namespace Sample
             button.TouchUpInside += (s, e) =>
             {
                 var logonManager = LoginManagerSlim.Shared;
-                logonManager.LoginWithViewController(this, delegateHandler);
+                logonManager.Login(new[] { "email", "profile" }, this, delegateHandler);
             };
 
             var skiaView = new SKCanvasView
@@ -47,13 +48,13 @@ namespace Sample
             button2.TouchUpInside += (s, e) =>
             {
                 var logonManager = LoginManagerSlim.Shared;
-                logonManager.LoginWithViewController(this, delegateHandler);
+                logonManager.Login(new[] { "email", "profile" }, this, delegateHandler);
             };
 
             AddConstraints(image, button, button2, skiaView);
         }
 
-        private void delegateHandler(loginResultEnum enumt, LoginResult result)
+        private void delegateHandler(LoginResultEnum enumt, LoginResult result, NSError error)
         {
         }
 

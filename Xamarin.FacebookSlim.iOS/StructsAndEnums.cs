@@ -1,9 +1,6 @@
-﻿using System;
-using Foundation;
-using ObjCRuntime;
-using UIKit;
+﻿using ObjCRuntime;
 
-namespace Xamarin.FacebookSlim
+namespace Xamarin.FacebookSlim.iOS
 {
     [Native]
     public enum AppEventNameEnum : long
@@ -34,7 +31,7 @@ namespace Xamarin.FacebookSlim
     }
 
     [Native]
-    public enum ProxyLoggingBehavior : long
+    public enum LoggingBehaviorEnum : long
     {
         AccessTokens = 0,
         PerformanceCharacteristics = 1,
@@ -43,9 +40,8 @@ namespace Xamarin.FacebookSlim
         CacheErrors = 4,
         UIControlErrors = 5,
         GraphAPIDebugWarning = 6,
-        GraphAPIDebugInfo = 7,
-        NetworkRequests = 8,
-        DeveloperErrors = 9
+        NetworkRequests = 7,
+        DeveloperErrors = 8
     }
 
     [Native]
@@ -56,5 +52,3 @@ namespace Xamarin.FacebookSlim
         LoggedIn = 2
     }
 }
-
-

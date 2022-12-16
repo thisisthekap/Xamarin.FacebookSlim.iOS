@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Xamarin.Legacy.Sdk/0.2.0-alpha2">
+  <PropertyGroup>
+    <TargetFrameworks>xamarin.ios10;net6.0-ios</TargetFrameworks>
+    <NoNFloatUsing Condition="'$(TargetFramework)' == 'xamarin.ios10'">true</NoNFloatUsing>
+    <IsBindingProject>true</IsBindingProject>
+    <NoBindingEmbedding>true</NoBindingEmbedding>
+    <RootNamespace>Xamarin.FacebookSlim.iOS</RootNamespace>
+    <SupportedOSPlatformVersion>12.5</SupportedOSPlatformVersion>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <IsPackable>true</IsPackable>
+    <PackageId>Xamarin.FacebookSlim.iOS</PackageId>
+    <Version>15.1.0.32</Version>
+    <Description>Contains bindings for https://github.com/facebook/facebook-ios-sdk</Description>
+    <Authors>Christian Kapplmüller, Hipolyto Obeso Huerta</Authors>
+    <Company>fun.music IT GmbH</Company>
+    <PackageOutputPath>nugetoutput</PackageOutputPath>
+  </PropertyGroup>
+
+  <Import Project="FacebookProxy.targets" />
+  <ItemGroup>
+    <_NativeReference Include="..\Output\FacebookProxy.xcframework">
+      <_Id>$(_FacebookProxyId)</_Id>
+    </_NativeReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FacebookProxy.targets" Pack="True" PackagePath="build/Xamarin.FacebookSlim.iOS.targets" />
+    <None Include="FacebookProxy.targets" Pack="True" PackagePath="buildTransitive/Xamarin.FacebookSlim.iOS.targets" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NuGet.Build.Tasks.Pack" Version="6.4.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  
+  <ItemGroup Condition="'$(TargetFramework)' == 'xamarin.ios10'">
+    <Compile Remove="ApiDefinitions.cs" />
+    <Compile Remove="StructsAndEnums.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
+    <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
+  </ItemGroup>
+
+</Project>
