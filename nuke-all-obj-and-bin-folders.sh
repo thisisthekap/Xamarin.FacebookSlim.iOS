@@ -9,9 +9,6 @@ while true; do
     case $yn in
         [Yy]* ) echo "nuking..." \
             && find . -type d -and \( -name "obj" -or -name "bin" \) -exec rm -rf {} \; \
-            && rm Sepp.Mobile.Droid/Resources/values*/strings.xml \
-            && rm Sepp.Mobile.iOS/Info.plist \
-            && rm Sepp.Mobile.iOS/Resources/*.lproj/InfoPlist.strings \
             && echo "nuking done"; break;;
         [Nn]* ) echo "skipped nuking" && exit;;
         * ) echo "Please answer (y)es or (n)o.";;
