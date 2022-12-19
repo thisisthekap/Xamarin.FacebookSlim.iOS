@@ -1,0 +1,63 @@
+trigger:
+  branches:
+    include:
+      - refs/tags/release-bindings-v*
+
+pr: none
+
+pool:
+  vmImage: 'macOS-12'
+
+variables:
+  - group: nuget.org
+
+steps:
+
+- bash: |
+    echo "##vso[task.setvariable variable=bindingsVersion]$(cat Xamarin.FacebookSlim.iOS/Xamarin.FacebookSlim.iOS.csproj | grep '<Version>' | awk -F '[<>]' '{print $3}')"
+  displayName: "extract library version"
+
+- bash: |
+    echo "##vso[build.updatebuildnumber]xamarin-facebookslim-ios-bindings-$(Build.SourceBranchName)-$(Build.BuildId)"
+  displayName: "update build name"
+
+- bash: |
+    if [[ "$(Build.SourceBranchName)" != *"$(bindingsVersion)" ]]; then
+      echo "mismatch between tag $(Build.SourceBranchName) and nuget version $(bindingsVersion)"
+      exit 1
+    fi
+  displayName: "check version sanity"
+
+- bash: |
+    ./clear.sh
+  displayName: "clear.sh"
+
+- bash: |
+    ./build.sh
+  displayName: "build.sh"
+
+- bash: |
+    cd Xamarin.FacebookSlim.iOS
+    dotnet clean --configuration Release
+    dotnet restore
+    dotnet build --configuration Release
+    dotnet pack --configuration Release
+  displayName: "dotnet build and pack"
+
+- bash: |
+    dotnet nuget push Xamarin.FacebookSlim.iOS/nugetoutput/Xamarin.FacebookSlim.iOS.*.nupkg -k "$(nugetOrgApiKey)" -s https://api.nuget.org/v3/index.json
+  displayName: "publish nuget"
+
+- task: GitHubRelease@1
+  inputs:
+    gitHubConnection: 'github.com_thisisthekap'
+    repositoryName: 'thisisthekap/Xamarin.FacebookSlim.iOS'
+    action: 'create'
+    target: '$(Build.SourceVersion)'
+    tagSource: 'userSpecifiedTag'
+    tag: '$(Build.SourceBranchName)'
+    title: 'Xamarin.FacebookSlim.iOS Bindings $(bindingsVersion)'
+    assets: 'Xamarin.FacebookSlim.iOS/nugetoutput/Xamarin.FacebookSlim.iOS.*.nupkg'
+    changeLogCompareToRelease: 'lastFullRelease'
+    changeLogType: 'issueBased'
+  displayName: 
