@@ -12,7 +12,7 @@
   <PropertyGroup>
     <IsPackable>true</IsPackable>
     <PackageId>Xamarin.FacebookSlim.iOS</PackageId>
-    <Version>15.1.0.33</Version>
+    <Version>15.1.0.35</Version>
     <Description>Contains bindings for https://github.com/facebook/facebook-ios-sdk</Description>
     <Authors>Christian Kapplmüller, Hipolyto Obeso Huerta</Authors>
     <Company>fun.music IT GmbH</Company>

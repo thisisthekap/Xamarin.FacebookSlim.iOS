@@ -208,7 +208,7 @@ public class CoreKitManagerSlim : NSObject {
     }
     
     @objc
-    public func setUser(userEmail : String, firstName : String, lastName : String, phone : String, dateOfBirth : String, gender : String, city : String, state : String, zip : String, country : String) -> Void {
+    public func setUser(userEmail : String?, firstName : String?, lastName : String?, phone : String?, dateOfBirth : String?, gender : String?, city : String?, state : String?, zip : String?, country : String?) -> Void {
         FBSDKCoreKit.AppEvents.shared.setUser(
             email: userEmail,
             firstName: firstName,
@@ -254,4 +254,3 @@ public class CoreKitManagerSlim : NSObject {
         return FBSDKCoreKit.ApplicationDelegate.shared.application(app,open:url,options:options)
     }
 }
-

@@ -46,9 +46,9 @@ namespace Xamarin.FacebookSlim.iOS
 		[NullAllowed, Export ("userId")]
 		string UserId { get; set; }
 
-		// -(void)setUserWithUserEmail:(NSString * _Nonnull)userEmail firstName:(NSString * _Nonnull)firstName lastName:(NSString * _Nonnull)lastName phone:(NSString * _Nonnull)phone dateOfBirth:(NSString * _Nonnull)dateOfBirth gender:(NSString * _Nonnull)gender city:(NSString * _Nonnull)city state:(NSString * _Nonnull)state zip:(NSString * _Nonnull)zip country:(NSString * _Nonnull)country;
+		// -(void)setUserWithUserEmail:(NSString * _Nullable)userEmail firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName phone:(NSString * _Nullable)phone dateOfBirth:(NSString * _Nullable)dateOfBirth gender:(NSString * _Nullable)gender city:(NSString * _Nullable)city state:(NSString * _Nullable)state zip:(NSString * _Nullable)zip country:(NSString * _Nullable)country;
 		[Export ("setUserWithUserEmail:firstName:lastName:phone:dateOfBirth:gender:city:state:zip:country:")]
-		void SetUser (string userEmail, string firstName, string lastName, string phone, string dateOfBirth, string gender, string city, string state, string zip, string country);
+		void SetUser ([NullAllowed] string userEmail, [NullAllowed] string firstName, [NullAllowed] string lastName, [NullAllowed] string phone, [NullAllowed] string dateOfBirth, [NullAllowed] string gender, [NullAllowed] string city, [NullAllowed] string state, [NullAllowed] string zip, [NullAllowed] string country);
 
 		// -(NSString * _Nonnull)anonymousId __attribute__((warn_unused_result("")));
 		[Export ("anonymousId")]
