@@ -60,4 +60,4 @@ steps:
     assets: 'Xamarin.FacebookSlim.iOS/nugetoutput/Xamarin.FacebookSlim.iOS.*.nupkg'
     changeLogCompareToRelease: 'lastFullRelease'
     changeLogType: 'issueBased'
-  displayName: 
+  displayName: Create GitHub Release
