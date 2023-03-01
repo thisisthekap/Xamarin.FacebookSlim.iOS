@@ -28,6 +28,16 @@ steps:
     fi
   displayName: "check version sanity"
 
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '7.0.103'
+  displayName: "install dotnet 7.0.103"
+
+- bash: |
+    dotnet workload install ios
+  displayName: "install ios workload"
+
 - bash: |
     ./clear.sh
   displayName: "clear.sh"
