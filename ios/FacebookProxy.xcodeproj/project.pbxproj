@@ -142,7 +142,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1240;
-				ORGANIZATIONNAME = "Jean-Marie Alfonsi";
+				ORGANIZATIONNAME = "fun.music IT GmbH";
 				TargetAttributes = {
 					B08309CF241256530090FB75 = {
 						CreatedOnToolsVersion = 11.3;
@@ -336,7 +336,7 @@
 				);
 				INFOPLIST_FILE = FacebookProxy/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -369,7 +369,7 @@
 				);
 				INFOPLIST_FILE = FacebookProxy/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
